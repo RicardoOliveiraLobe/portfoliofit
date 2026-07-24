@@ -1,0 +1,98 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+:root {
+  --background: 0 0% 100%;
+  --foreground: 225 43% 15%;
+  --card: 0 0% 100%;
+  --card-foreground: 225 43% 15%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 225 43% 15%;
+  --primary: 225 43% 20%; /* #1E2849 */
+  --primary-foreground: 0 0% 100%;
+  --secondary: 177 18% 80%; /* #C1D6D5 */
+  --secondary-foreground: 225 43% 20%;
+  --muted: 28 48% 80%; /* #E7C6B1 */
+  --muted-foreground: 225 43% 25%;
+  --accent: 18 32% 70%; /* #CFA393 */
+  --accent-foreground: 225 43% 20%;
+  --destructive: 0 84.2% 60.2%;
+  --destructive-foreground: 0 0% 100%;
+  --border: 28 48% 75%;
+  --input: 28 48% 75%;
+  --ring: 18 32% 70%;
+  --radius: 0.5rem;
+}
+
+* {
+  border-color: hsl(var(--border));
+}
+
+body {
+  background-color: hsl(var(--background));
+  font-family: 'Inter', sans-serif;
+  color: hsl(var(--foreground));
+  min-height: 100vh;
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, hsl(var(--accent)) 0%, hsl(var(--secondary)) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.icon-gradient {
+  background: linear-gradient(135deg, hsl(var(--secondary)) 0%, hsl(var(--accent)) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.hero-gradient {
+  background-color: hsl(var(--primary));
+}
+
+.card-hover {
+  transition: all 0.3s ease;
+}
+
+.card-hover:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.floating-whatsapp {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+  background: #25D366;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(37, 211, 102, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+  }
+}
+
+.scroll-smooth {
+  scroll-behavior: smooth;
+}
