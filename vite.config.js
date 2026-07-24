@@ -278,7 +278,7 @@ logger.error = (msg, options) => {
 }
 
 export default defineConfig({
-	base: './',
+	base: isDev ? '/' : '/portfoliofit/',
 	customLogger: logger,
 	plugins: [
 		...(isDev ? [inlineEditPlugin(), editModeDevPlugin(), iframeRouteRestorationPlugin(), selectionModePlugin()] : []),
